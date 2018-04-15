@@ -35,6 +35,60 @@ def create_awards():
     # (solo_win, duo_win, squad_win) = umbrella , team_id
     pass
 
+def create_account():
+    """Function to create an account for a competitor."""
+    pass
+
+def edit_accout():
+    """Function to edit an existing competitor's account"""
+    pass
+
+def delete_account():
+    """Function to delete a competitor's account."""
+    pass
+
+def create_event():
+    """Function to create an event."""
+    pass
+
+def enter_event():
+    """Function to enroll a competitor into an event."""
+    pass
+
+def change_event():
+    """Function to allow a competitor to change event."""
+    pass
+
+def remove_event():
+    """Function to remove competitor from an event."""
+    pass
+
+def show_all_competitors():
+    """Function to display all competitors."""
+    pass
+
+def show_male_competitors():
+    """Function to display all male competitors."""
+    pass
+
+def show_female_competitors():
+    """Function to display all female competitors."""
+    pass
+
+def show_all_events():
+    """Function to display all events."""
+    pass
+
+def show_all_events_with_competitors():
+    """Function to display all events with the competitors."""
+
+def show_all_winners():
+    """Function to display all the winners from all the events."""
+    pass
+
+def look_up_competitor():
+    """Function to look up a competitor."""
+    pass
 def main():
 
     create_db()
@@ -85,38 +139,41 @@ def main():
         print("13. Look up user.")
         print("\nEnter -1 to quit.")
 
-        user_input = int(input("Choice: "))
-
-        if user_input < 0:
-            done = True
-        elif user_input is 1:
-            pass
-        elif user_input is 2:
-            pass
-        elif user_input is 3:
-            pass
-        elif user_input is 4:
-            pass
-        elif user_input is 5:
-            pass
-        elif user_input is 6:
-            pass
-        elif user_input is 7:
-            pass
-        elif user_input is 8:
-            pass
-        elif user_input is 9:
-            pass
-        elif user_input is 10:
-            pass
-        elif user_input is 11:
-            pass
-        elif user_input is 12:
-            pass
-        elif user_input is 13:
-            pass
+        try:
+            user_input = int(input("Choice: "))
+        except ValueError:
+            print("That is an invalid entry. Please try again.")
         else:
-            print("Invalid Input: Please enter an integer from the options.")
+            if user_input < 0:
+                done = True
+            elif user_input is 1:
+                pass
+            elif user_input is 2:
+                pass
+            elif user_input is 3:
+                pass
+            elif user_input is 4:
+                pass
+            elif user_input is 5:
+                pass
+            elif user_input is 6:
+                pass
+            elif user_input is 7:
+                pass
+            elif user_input is 8:
+                pass
+            elif user_input is 9:
+                pass
+            elif user_input is 10:
+                pass
+            elif user_input is 11:
+                pass
+            elif user_input is 12:
+                pass
+            elif user_input is 13:
+                pass
+            else:
+                print("Invalid Input: Please make a selection from one of the options .")
 
 
 
