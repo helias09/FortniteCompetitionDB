@@ -17,17 +17,34 @@ def create_db():
     create_awards()
     pass
 
-def create_competitor():
+def create_competitor(cur):
     # creates the competitors db
 
     # user_id (primary key), name, phone_number, sex, age, username, kills, deaths, wins, games_played
-    pass
+    cmd = """
+    CREATE TABLE Competitors(
+        user_id INTEGER PRIMARY KEY NOT NULL,
+        name TEXT NOT NULL,
+        phone_number TEXT,
+        sex VARCHAR(1) NOT NULL,
+        age INTEGER NOT NULL,
+        username TEXT NOT NULL,
+        kills INTEGER,
+        deaths INTEGER,
+        wins INTEGER,
+        games_played INTEGER
+    );
+    """
+    cur.execute(cmd)
 
-def create_event():
+def create_event(cur):
     # creates the event db
 
     # event_id, time, event_name (solo, duo, squad, LTM limited time mode), user_id, team_id, win
-    pass
+    cmd = """
+    CREATE TABLE EVENTS(
+        event_id,
+ time, event_name (solo, duo, squad, LTM limited time mode), user_id, team_id, win
 
 def create_awards():
     # creates the awards db
