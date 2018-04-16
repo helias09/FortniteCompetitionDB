@@ -43,8 +43,8 @@ def create_event(cur):
     # event_id, time, event_name (solo, duo, squad, LTM limited time mode), user_id, team_id, win
     cmd = """
     CREATE TABLE EVENTS(
-        event_id,
- time, event_name (solo, duo, squad, LTM limited time mode), user_id, team_id, win
+        event_id INTEGER PRIMARY KEY NOT NULL,
+        time, event_name (solo, duo, squad, LTM limited time mode), user_id, team_id, win
 
 def create_awards():
     # creates the awards db
