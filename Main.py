@@ -44,13 +44,22 @@ def create_event(cur):
     cmd = """
     CREATE TABLE EVENTS(
         event_id INTEGER PRIMARY KEY NOT NULL,
-        time, event_name (solo, duo, squad, LTM limited time mode), user_id, team_id, win
+        time TEXT,
+        event_name TEXT NOT NULL,
+        user_id INTEGER NOT NULL,
+        team_id INTEGER,
+        win INTEGER
+    );
+    """
+    cur.execute(cmd)
 
-def create_awards():
+def create_awards(cur):
     # creates the awards db
 
     # (solo_win, duo_win, squad_win) = umbrella , team_id
-    pass
+    cmd = """
+    CREATE TABLE Awards(
+        (solo_win, duo_win, squad_win) = umbrella , team_id
 
 def create_account():
     """Function to create an account for a competitor."""
